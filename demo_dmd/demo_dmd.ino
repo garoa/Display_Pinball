@@ -24,8 +24,8 @@ void setup()
 
 int count = 0;
 int offset = 0;
-int scrollspeed=168-2;
-boolean y_center=false;
+int scrollspeed = 168-2;
+boolean y_center = false;
 
 char msg1[29] = "       HACKERSPACE SP       ";
 char msg2[29] = "    GAROA  HACKER  CLUBE    ";
@@ -128,7 +128,7 @@ void demo_serial_plot ()
     for (col=0;col<5;col++){      
 
 #if 1
-      c = msg1[idx]
+      char c = msg1[idx];
       if (c == 0x20){
         mybuffer[px*2]=0;
       } else {
@@ -139,14 +139,14 @@ void demo_serial_plot ()
         }
       }
 
-      c = msg2[idx]
+      c = msg2[idx];
       if (c == 0x20){
         mybuffer[px*2 + 1]=0;
       } else {
         if (c >= '0' && c <= '9'){
-          mybuffer[px*2] = chartable[ c - '0' + 27 ][col];
+          mybuffer[px*2 + 1] = chartable[ c - '0' + 27 ][col];
         } else {
-          mybuffer[px*2] = chartable[ c - 'A' + 1 ][col];
+          mybuffer[px*2 + 1] = chartable[ c - 'A' + 1 ][col];
         }
       }
       

@@ -14,8 +14,7 @@
 
 #ifndef Led_matrix_h
 #define Led_matrix_h
-#include "WProgram.h"
-#include "WConstants.h"
+#include "Arduino.h"
 #include <avr/pgmspace.h>
 
 #define HT1632_ID_CMD 4		/* ID = 100 - Commands */
